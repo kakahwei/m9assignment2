@@ -1,0 +1,59 @@
+---
+title: "Data Science Student Performance System"
+author: "kaka"
+date: "24 January 2016"
+output: slidy_presentation
+runtime: shiny
+resource_files:
+- server.R
+- ui.R
+- Coursera_Record.csv
+---
+
+## Introduction
+This is a simple program which allow user add on and keep track Data Science students' result. 
+
+After user key in student result details, server will determine if this student get distinction/passed/failed for that particular module and dispaly at 'Newly Add Record' & append to History table.
+
+Input Fields :
+
+  - Student Name : Text field , default as ""
+  
+  - Score : Numeirc Field, min 0, max 100, default as 70
+  
+  - Module : Single selection Field , from  0 to 10 , default as 1
+  
+  - Date Completed (YY-MM) : Date picker Field
+
+## System Preview
+```{r, echo=FALSE}
+shinyAppDir(
+  "./",
+  options=list(
+    width="100%", height=550
+  )
+)
+```
+
+## Features 
+At history table , you are allowed to perform the below:
+
+- Determine how many entries to show in history table. (Max is to show 30 records)
+
+- Uses 'Search' function to search any data from history table.
+
+- Filter data by individual column
+
+## Note for programmer
+1. This program is tested well using :
+
+  - R version 3.2.1 (2015-06-18)
+  
+  - Platform: x86_64-w64-mingw32/x64 (64-bit)
+  
+  - Running under: Windows 8 x64 (build 9200)
+  
+  - library : shiny_0.13.0, ggplot2_2.0.0 
+
+2. History data are kept in a file named 'Coursera_Record.csv'.In order to run in your local , kindly set working directory in server.R.
+3. If 'Coursera_Record.csv' is not exist, program will generate it and kindly refresh the page then only start key in the data.
