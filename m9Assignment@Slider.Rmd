@@ -38,11 +38,13 @@ shinyAppDir(
 ## Features 
 At history table , you are allowed to perform the below:
 
-- Determine how many entries to show in history table. (Max is to show 30 records)
+- Sort the result by particular column
+
+- Determine no of entries to be showed. (Maximum 30 records)
 
 - Uses 'Search' function to search any data from history table.
 
-- Filter data by individual column
+- Search data in particular column by enter value in the last row of history table
 
 ## Note for programmer
 1. This program is tested well using :
